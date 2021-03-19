@@ -1,0 +1,5 @@
+<div>
+  <app-chatmessages></app-chatmessages>
+  <input type="text" (keydown.enter)="send()" placeholder="new message..." name="message" [(ngModel)]="message" #newmessage >
+  <span class="add" (click)="send()">➕</span>
+</div>
