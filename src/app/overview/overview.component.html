@@ -1,3 +1,8 @@
-<p>
-  overview works!
-</p>
+<div class="grid-container">
+  <div class="chatview">
+    <app-chatperson [person]="chat"  *ngFor="let chat of thatsappService.chatList" (click)="selectList(chat)"></app-chatperson>
+  </div>
+  <div class="messagesarea">
+    <app-send [person]="selectedList"></app-send>
+  </div>
+</div>

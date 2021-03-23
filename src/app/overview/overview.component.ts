@@ -1,3 +1,4 @@
+import { ThatsappService } from './../thatsapp.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,8 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./overview.component.css']
 })
 export class OverviewComponent  {
+  selectedList: any;
 
-  constructor() { }
+  constructor(public thatsappService: ThatsappService) {
+    this.selectedList = thatsappService.chatList[0]
+   }
 
+   selectList(personTodo) {
+    this.selectedList = personTodo;
+  }
 
 }

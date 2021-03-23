@@ -1,25 +1,28 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { ThatsappService } from '../thatsapp.service';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { IMessage, ThatsappService } from '../thatsapp.service';
 
 @Component({
   selector: 'app-send',
   templateUrl: './send.component.html',
   styleUrls: ['./send.component.css']
 })
-export class SendComponent {
+export class SendComponent{
   @ViewChild("newmessage", { static: false }) newmessage: ElementRef<HTMLInputElement>;
-  message: string;
+  @Input() person;
 
+  constructor(public thatsappService: ThatsappService, public elementRef: ElementRef) { }
+  
+  send() {
+    let imessages: IMessage = {
+      name: "Ich",
+      message: this.newmessage.nativeElement.value,
+    }
+    this.person.messages.push(imessages);
+    console.log(this.person.messages)
+    this.clear();
+  }
 
-  constructor(public thatsappService: ThatsappService, public elementRef: ElementRef) {
-   }
-
-   send(){
-     this.thatsappService.chatList.push();
-     this.clear();
-   }
-
-   clear() {
+  clear() {
     this.newmessage.nativeElement.value = "";
   }
 

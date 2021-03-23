@@ -1,5 +1,10 @@
 <div>
-  <app-chatmessages></app-chatmessages>
-  <input type="text" (keydown.enter)="send()" placeholder="new message..." name="message" [(ngModel)]="message" #newmessage >
-  <span class="add" (click)="send()">➕</span>
+  <div class="chatmessages">
+  <app-chatmessages [answer]="message" [messages]="person.messages" *ngFor="let message of person.messages"></app-chatmessages>
+  </div>
+  <div class="sendmesssage">
+  <input type="text" (keydown.enter)="send()" placeholder="new message..." name="chatmessage" #newmessage >
+  <span class="send" (click)="send()">➕</span>
 </div>
+</div>
+ 

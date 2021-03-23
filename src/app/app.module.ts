@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { OverviewComponent } from './overview/overview.component';
 import { SendComponent } from './send/send.component';
+import { ChatpersonComponent } from './chatperson/chatperson.component';
 import { ChatmessagesComponent } from './chatmessages/chatmessages.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
       OverviewComponent,
       SendComponent,
+      ChatpersonComponent,
       ChatmessagesComponent
    ],
   imports: [
