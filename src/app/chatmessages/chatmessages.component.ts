@@ -7,11 +7,22 @@ import { ThatsappService } from '../thatsapp.service';
   templateUrl: './chatmessages.component.html',
   styleUrls: ['./chatmessages.component.css']
 })
-export class ChatmessagesComponent  {
+export class ChatmessagesComponent {
   @Input() answer: IMessage;
   @Input() messages: IMessage;
+  position: string;
 
-  constructor(public thatsappService: ThatsappService) { }
+  constructor(public thatsappService: ThatsappService) {}
+
+  showposition(){
+    if (this.answer.name==="Ich"){
+      this.position="right";
+    }
+    else{
+      this.position="left";
+    }
+  }
+
 
 
 }

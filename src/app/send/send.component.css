@@ -1,13 +1,47 @@
+.selectedchat{
+    width: 730px;
+    height: 60px;
+    background-color: darkseagreen; 
+    display: flex;
+}
+
 .sendmesssage{
-    width: 750px;
-    height: 75px;
-    border: 1px solid black;
-    background-color: purple; 
+    width: 730px;
+    height: 60px;
+    background-color: darkseagreen; 
 }
 
 .chatmessages{
-    width: 750px;
-    height: 850px;
-    border: 1px solid black;
-    background-color: green; 
+    width: 730px;
+    height: 780px;
+    background-color: darkslategrey;
 }
+
+.scrollbar{
+    width: 730px;
+    height: 780px;
+    
+}
+.picture {
+    
+    background-color: darkslategrey;
+    border: white 1px solid;
+    align-items: center;
+    margin-top: auto;
+    justify-content: center;
+    margin-bottom: auto;
+    float: left;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+  }
+
+  .name {
+    grid-column: 2 / 6;
+    grid-row: 1 ;
+    font-size: 16px;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+  }

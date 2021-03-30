@@ -1,3 +1,4 @@
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -6,7 +7,6 @@ import { OverviewComponent } from './overview/overview.component';
 import { SendComponent } from './send/send.component';
 import { ChatpersonComponent } from './chatperson/chatperson.component';
 import { ChatmessagesComponent } from './chatmessages/chatmessages.component';
-
 @NgModule({
   declarations: [				
     AppComponent,
@@ -17,7 +17,8 @@ import { ChatmessagesComponent } from './chatmessages/chatmessages.component';
    ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ScrollingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

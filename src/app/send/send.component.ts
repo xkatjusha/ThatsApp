@@ -1,3 +1,4 @@
+import { IChat } from './../thatsapp.service';
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { IMessage, ThatsappService } from '../thatsapp.service';
 
@@ -8,7 +9,7 @@ import { IMessage, ThatsappService } from '../thatsapp.service';
 })
 export class SendComponent{
   @ViewChild("newmessage", { static: false }) newmessage: ElementRef<HTMLInputElement>;
-  @Input() person;
+  @Input() person:IChat;
 
   constructor(public thatsappService: ThatsappService, public elementRef: ElementRef) { }
   
@@ -18,13 +19,15 @@ export class SendComponent{
       message: this.newmessage.nativeElement.value,
     }
     this.person.messages.push(imessages);
-    console.log(this.person.messages)
+    console.log("hallo",this.person.messages);
+
     this.clear();
   }
 
   clear() {
     this.newmessage.nativeElement.value = "";
   }
+  
 
 
 }

@@ -1,10 +1,17 @@
+<div class="selectedchat">
+  <p class="picture"> {{person.picture}}</p>
+  <p class="name">{{person.name}}</p>
+</div>
 <div>
-  <div class="chatmessages">
-  <app-chatmessages [answer]="message" [messages]="person.messages" *ngFor="let message of person.messages"></app-chatmessages>
-  </div>
+  <cdk-virtual-scroll-viewport itemSize="50" class="scrollbar">
+    <div class="chatmessages">
+      <app-chatmessages [answer]="message" [messages]="person.messages" *cdkVirtualFor="let message of person.messages">
+      </app-chatmessages>
+      <br>
+    </div>
+  </cdk-virtual-scroll-viewport>
   <div class="sendmesssage">
-  <input type="text" (keydown.enter)="send()" placeholder="new message..." name="chatmessage" #newmessage >
-  <span class="send" (click)="send()">➕</span>
+    <input type="text" (keydown.enter)="send()" placeholder="new message..." name="chatmessage" #newmessage>
+    <span class="send" (click)="send()">➕</span>
+  </div>
 </div>
-</div>
- 
