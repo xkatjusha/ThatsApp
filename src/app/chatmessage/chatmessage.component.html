@@ -1,0 +1,8 @@
+<!--Textboxen / Nachrichten-->
+<div @fadeIn [ngClass]="{
+  'right': answer.name === 'Ich',
+  'left': answer.name !== 'Ich'}" >
+  <output type="text" >{{answer.message}}</output>
+</div>
+
+

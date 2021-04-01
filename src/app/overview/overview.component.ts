@@ -13,6 +13,7 @@ export class OverviewComponent  {
     this.selectedList = thatsappService.chatList[0]
    }
 
+   //chats auswahl
    selectList(personTodo) {
     this.selectedList = personTodo;
   }

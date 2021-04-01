@@ -6,19 +6,22 @@ import { AppComponent } from './app.component';
 import { OverviewComponent } from './overview/overview.component';
 import { SendComponent } from './send/send.component';
 import { ChatpersonComponent } from './chatperson/chatperson.component';
-import { ChatmessagesComponent } from './chatmessages/chatmessages.component';
+import { ChatmessageComponent } from './chatmessage/chatmessage.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [				
     AppComponent,
       OverviewComponent,
       SendComponent,
       ChatpersonComponent,
-      ChatmessagesComponent
+      ChatmessageComponent
    ],
   imports: [
     BrowserModule,
     FormsModule,
     ScrollingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

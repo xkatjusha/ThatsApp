@@ -1,0 +1,36 @@
+div{
+    background-color: rgb(39, 59, 59);
+    height: 100% ;
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+}
+
+.view{
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+tr{
+    margin-left: auto;
+    margin-right: auto;
+    border:solid 1px white;
+}
+
+body{
+    background-size: auto;
+    background-color:GhostWhite;
+}
+
+
+.thatsapp{
+    background-image: url("~src/assets/picture/ThatsApp.jpeg");
+    height: 900px;
+    width: 1000px;
+}

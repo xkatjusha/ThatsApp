@@ -1,3 +1,4 @@
+import { animate, transition } from '@angular/animations';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,8 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class ThatsappService {
   chatList: IChat[];
+  showfrontpage: boolean;
 
   constructor() {
+    this.showfrontpage = false;
+    //alle Chats
     let mama: IChat = {
       picture: "😀",
       name: "Mama",
@@ -125,6 +129,22 @@ export class ThatsappService {
       messages: []
     }
     this.chatList = [mama, martin, alexandra, leonie, iT02, simon, alex, noah, disney, niklas, tim, fabian, markus, lara, kim, andre];
+  }
+
+  frontpage(){
+    if(this.showfrontpage===false){
+      this.timer();
+    }
+  }
+
+  //Front Page erscheint für 2 Sekunden
+  async timer() {
+    await this.Sleep(1000);
+    this.showfrontpage = true;
+  }
+
+  Sleep(milliseconds) {
+    return new Promise(resolve => setTimeout(resolve, milliseconds));
   }
 }
 

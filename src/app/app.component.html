@@ -1,8 +1,14 @@
-<app-overview></app-overview>
-<!-- Logo wird Mittwoch fertig gemacht
-Logo wird anfangs und beim laden  2 Sek. zusehen sein
-neue Texte werden erscheinen
-Namen in der Mitte wird Dicker
-input box wird größer und mittg
-Text Blöcke in farbe
-backgroundcolor darkslategrey-->
+
+<body>
+    <div>
+      <table>
+        <tr>
+            <div class="thatsapp" *ngIf="thatsappService.showfrontpage===false"></div>
+            <app-overview class="view" *ngIf="thatsappService.showfrontpage===true"></app-overview>
+        </tr>
+      </table>
+    </div>
+  </body>
+
+
+

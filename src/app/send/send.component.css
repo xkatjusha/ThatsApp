@@ -1,20 +1,22 @@
 .selectedchat{
-    width: 730px;
+    width: auto;
     height: 60px;
     background-color: darkseagreen; 
     display: flex;
 }
 
 .sendmesssage{
-    width: 730px;
+    width: auto;
     height: 60px;
     background-color: darkseagreen; 
+ 
 }
 
-.chatmessages{
-    width: 730px;
+.chatmessage{
+    width: auto;
     height: 780px;
     background-color: darkslategrey;
+    overflow-y: auto;
 }
 
 .scrollbar{
@@ -40,8 +42,16 @@
   .name {
     grid-column: 2 / 6;
     grid-row: 1 ;
-    font-size: 16px;
+    font-size: 25px;
     align-items: center;
     margin: auto;
     justify-content: center;
+    font-weight: bolder;
+  }
+
+  input {
+      width: 700px;
+      height: 40px;
+      margin-left: 15px;
+      margin-top: 7px
   }
